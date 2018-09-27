@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.title }}</td>
+		<td>{{ i.start_date }}</td>
+		<td>{{ i.end_date }}</td>
+		<td>{{ i.hours }}</td>
+		<td>{{ i.project_id }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_requirement' %}">register new requirement</a>
+
+{% endblock %}

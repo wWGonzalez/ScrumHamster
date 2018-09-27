@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.mistake_type }}</td>
+		<td>{{ i.mistake_title }}</td>
+		<td>{{ i.comment }}</td>
+		<td>{{ i.state }}</td>
+		<td>{{ i.qualification }}</td>
+		<td>{{ i.homework_id }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_mistakes' %}">register new mistake</a>
+
+{% endblock %}

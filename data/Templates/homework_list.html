@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.percent }}</td>
+		<td>{{ i.state }}</td>
+		<td>{{ i.hours }}</td>
+		<td>{{ i.requirement_id }}</td>
+		<td>{{ i.user_id_in_charge }}</td>
+		<td>{{ i.user_id_supervisor }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_homework' %}">register new homework</a>
+
+{% endblock %}

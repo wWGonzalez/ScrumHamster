@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.percent }}</td>
+		<td>{{ i.project_date }}</td>
+		<td>{{ i.client_id }}</td>
+		<td>{{ i.product_owner }}</td>
+		<td>{{ i.scrum_master }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_project' %}">register new project</a>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.rol }}</td>
+		<td>{{ i.user_id }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_rol' %}">register new rol</a>
+
+{% endblock %}

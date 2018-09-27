@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index page</title>
+</head>
+<body>
+
+<ul>
+	<li><a href="{% url 'list_client' %}">client list</a></li>
+	<li><a href="{% url 'list_project' %}">project list</a></li>
+	<li><a href="{% url 'list_requirement' %}">requirement list</a></li>
+	<li><a href="{% url 'list_homework' %}">homework list</a></li>
+	<li><a href="{% url 'list_mistakes' %}">mistakes list</a></li>
+	<li><a href="{% url 'list_comments' %}">comments list</a></li>
+	<li><a href="{% url 'list_rol' %}">rol list</a></li>
+</ul>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

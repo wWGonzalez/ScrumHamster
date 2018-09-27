@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.comment }}</td>
+		<td>{{ i.homework_id }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_comments' %}">register new comment</a>
+
+{% endblock %}

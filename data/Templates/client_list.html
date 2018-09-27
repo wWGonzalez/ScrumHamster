@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table border="10">
+{% for i in data %}
+
+	<tr>
+		<td>{{ i.name }}</td>
+		<td>{{ i.telephone }}</td>
+		<td>{{ i.address }}</td>
+	</tr>
+
+{% endfor %}
+</table>
+
+<a href="{% url 'create_client' %}">register new client</a>
+
+{% endblock %}
